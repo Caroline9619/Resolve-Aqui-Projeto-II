@@ -1,7 +1,7 @@
  # Resolve Aqui: Gestor de Demandas Municipais
 
 ##  Sobre o projeto
-É uma**Plataforma Web** que se caracteriza por ser uma maneira objetiva de estruturar as demandas dos moradores com as possibilidades de resolução da gestão, em que com o recebimento das ocorrências, organização, classificação e acompanhamento das respostas para agendamento de soluções de acordo com a prioridade da demanda citada, oferecendo soluções adequadas ou encaminhamentos para órgãos e entidades competentes que possam despachar corretamente.
+É uma **Plataforma Web** que se caracteriza por ser uma maneira objetiva de estruturar as demandas dos moradores com as possibilidades de resolução da gestão, em que com o recebimento das ocorrências, organização, classificação e acompanhamento das respostas para agendamento de soluções de acordo com a prioridade da demanda citada, oferecendo soluções adequadas ou encaminhamentos para órgãos e entidades competentes que possam despachar corretamente.
 
 
 ##  Objetivos
