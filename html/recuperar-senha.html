@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resolve Aqui - Recuperação de Senha</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/recuperar-senha.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="logo-area">
+                <img src="../img/logo.png" alt="Logo Resolve Aqui">
+            </div>
+
+           <nav>
+
+    <a href="inicio.html">
+        <i class="fa-solid fa-house"></i>
+        <span>Início</span>
+    </a>
+
+    <a href="perfil.html">
+        <i class="fa-solid fa-user"></i>
+        <span>Meu Perfil</span>
+    </a>
+
+    <a href="login.html">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Sair</span>
+    </a>
+
+</nav>
+
+        </aside>
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="conteudo">
+
+            <div class="card">
+
+                <h1>Recuperação de Senha</h1>
+
+                <p class="subtitulo">
+                    Informe o e-mail para o qual deseja redefinir a sua senha.
+                </p>
+
+
+                <form id="recuperacaoForm">
+
+                    <div class="campo">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button type="submit" class="btn-principal">
+                        Redefinir senha
+                    </button>
+
+                </form>
+
+
+                <!-- MENSAGEM DE SUCESSO -->
+                <div id="mensagemSucesso" class="mensagem sucesso">
+
+                    Foram enviadas ao seu e-mail as instruções
+                    para redefinição de senha.
+
+                </div>
+
+
+                <a href="login.html" class="voltar">
+                    Voltar ao login
+                </a>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="../js/recuperar-senha.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,404 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    min-height: 100vh;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   MENU LATERAL
+========================= */
+
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+
+    background: #163b70;
+
+    padding: 30px 20px;
+
+    color: white;
+}
+
+.logo-area {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.logo-area img {
+    width: 130px;
+
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+/* MENU */
+
+.sidebar nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.sidebar nav a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 18px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+.sidebar nav a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* ÍCONES */
+
+.sidebar nav a i {
+    width: 20px;
+
+    min-width: 20px;
+
+    text-align: center;
+
+    font-size: 17px;
+}
+
+
+/* ITEM ATIVO */
+
+.sidebar nav a.ativo {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+
+.conteudo {
+    flex: 1;
+
+    padding: 45px 50px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.cabecalho h1 {
+    color: #163b70;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.cabecalho h1 span {
+    color: #1769aa;
+}
+
+.cabecalho p {
+    color: #667085;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   NOVA OCORRÊNCIA
+========================= */
+
+.nova-ocorrencia {
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 40px;
+}
+
+.btn-ocorrencia {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 50px;
+
+    padding: 14px 28px;
+
+    background: #1769aa;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.btn-ocorrencia:hover {
+    background: #12558b;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   MINHAS OCORRÊNCIAS
+========================= */
+
+.ocorrencias {
+    width: 100%;
+}
+
+.ocorrencias h2 {
+    color: #163b70;
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   LISTA
+========================= */
+
+.lista-ocorrencias {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* =========================
+   CARD DA OCORRÊNCIA
+========================= */
+
+.ocorrencia-card {
+    width: 100%;
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 22px 25px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border: 1px solid #edf0f5;
+
+    transition: 0.2s;
+}
+
+.ocorrencia-card:hover {
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.11);
+}
+
+
+/* CONTEÚDO */
+
+.ocorrencia-conteudo {
+    flex: 1;
+}
+
+.ocorrencia-conteudo h3 {
+    color: #344054;
+
+    font-size: 17px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.informacoes {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.informacoes p {
+    color: #667085;
+
+    font-size: 13px;
+}
+
+.informacoes strong {
+    color: #344054;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+    min-width: 105px;
+
+    text-align: center;
+
+    padding: 8px 12px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* EM ANÁLISE */
+
+.status-analise {
+    background: #fff3cd;
+
+    color: #856404;
+}
+
+
+/* RESOLVIDA */
+
+.status-resolvida {
+    background: #e8f5e9;
+
+    color: #256029;
+}
+
+
+/* RECEBIDA */
+
+.status-recebida {
+    background: #e3f2fd;
+
+    color: #1769aa;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 768px) {
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 20px;
+    }
+
+    .logo-area {
+        margin-bottom: 20px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .conteudo {
+        padding: 30px 20px;
+    }
+
+    .cabecalho h1 {
+        font-size: 25px;
+    }
+
+    .ocorrencia-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .status {
+        align-self: flex-start;
+    }
+
+    .informacoes {
+        flex-direction: column;
+
+        gap: 7px;
+    }
+
+}

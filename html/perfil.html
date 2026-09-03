@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resolve Aqui - Meu Perfil</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- =========================
+             MENU LATERAL
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <div class="logo-area">
+
+                <img
+                    src="../img/logo.png"
+                    alt="Logo Resolve Aqui"
+                >
+
+            </div>
+
+            <nav>
+
+                <a href="inicio.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Início</span>
+
+                </a>
+
+                <a href="perfil.html" class="ativo">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>Meu Perfil</span>
+
+                </a>
+
+                <a href="login.html">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Sair</span>
+
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- =========================
+             CONTEÚDO PRINCIPAL
+        ========================== -->
+
+        <main class="conteudo">
+
+            <!-- CABEÇALHO -->
+
+            <section class="cabecalho">
+
+                <h1>
+                    Bem-vindo, <span id="nomeUsuario">Nome da Pessoa</span>!
+                </h1>
+
+                <p>
+                    Acompanhe suas ocorrências e registre novas solicitações.
+                </p>
+
+            </section>
+
+
+            <!-- BOTÃO NOVA OCORRÊNCIA -->
+
+            <section class="nova-ocorrencia">
+
+                <a href="nova-ocorrencia.html" class="btn-ocorrencia">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Registrar Nova Ocorrência
+
+                </a>
+
+            </section>
+
+
+            <!-- =========================
+                 MINHAS OCORRÊNCIAS
+            ========================== -->
+
+            <section class="ocorrencias">
+
+                <h2>
+                    Minhas Ocorrências
+                </h2>
+
+
+                <!-- LISTA DE OCORRÊNCIAS -->
+
+                <div id="listaOcorrencias" class="lista-ocorrencias">
+
+
+                    <!-- OCORRÊNCIA 1 -->
+
+                    <div class="ocorrencia-card">
+
+                        <div class="ocorrencia-conteudo">
+
+                            <h3>
+                                Buraco na rua em frente à residência
+                            </h3>
+
+                            <div class="informacoes">
+
+                                <p>
+                                    <strong>Data:</strong>
+                                    03/09/2026
+                                </p>
+
+                                <p>
+                                    <strong>Número de Protocolo:</strong>
+                                    RA-2026-000123
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="status status-analise">
+
+                            Em análise
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- OCORRÊNCIA 2 -->
+
+                    <div class="ocorrencia-card">
+
+                        <div class="ocorrencia-conteudo">
+
+                            <h3>
+                                Lâmpada de iluminação pública apagada
+                            </h3>
+
+                            <div class="informacoes">
+
+                                <p>
+                                    <strong>Data:</strong>
+                                    01/09/2026
+                                </p>
+
+                                <p>
+                                    <strong>Número de Protocolo:</strong>
+                                    RA-2026-000098
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="status status-resolvida">
+
+                            Resolvida
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- OCORRÊNCIA 3 -->
+
+                    <div class="ocorrencia-card">
+
+                        <div class="ocorrencia-conteudo">
+
+                            <h3>
+                                Acúmulo de lixo em área pública
+                            </h3>
+
+                            <div class="informacoes">
+
+                                <p>
+                                    <strong>Data:</strong>
+                                    28/08/2026
+                                </p>
+
+                                <p>
+                                    <strong>Número de Protocolo:</strong>
+                                    RA-2026-000075
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="status status-recebida">
+
+                            Recebida
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/perfil.js"></script>
+
+</body>
+
+</html>

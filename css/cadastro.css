@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    min-height: 100vh;
+}
+
+/* ============================= */
+/* LAYOUT PRINCIPAL */
+/* ============================= */
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ============================= */
+/* MENU LATERAL */
+/* ============================= */
+
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+
+    background: #163b70;
+
+    padding: 30px 20px;
+
+    color: white;
+}
+
+.logo {
+    width: 130px;
+
+    display: block;
+
+    margin: 0 auto 45px auto;
+}
+
+.sidebar nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.sidebar a {
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 18px;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ÍCONES DO MENU */
+
+.sidebar a i {
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 17px;
+}
+
+/* ============================= */
+/* CONTEÚDO */
+/* ============================= */
+
+.conteudo {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px;
+}
+
+/* ============================= */
+/* CARTÃO DO FORMULÁRIO */
+/* ============================= */
+
+.formulario-container {
+    width: 100%;
+
+    max-width: 650px;
+
+    background: #ffffff;
+
+    padding: 45px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================= */
+/* TÍTULO */
+/* ============================= */
+
+.formulario-container h1 {
+    text-align: center;
+
+    color: #173a68;
+
+    margin-bottom: 10px;
+
+    font-size: 30px;
+}
+
+.subtitulo {
+    text-align: center;
+
+    color: #667085;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    margin-bottom: 30px;
+}
+
+form {
+    width: 100%;
+}
+
+/* ============================= */
+/* CAMPOS */
+/* ============================= */
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+
+    background: none;
+
+    color: #344054;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    padding: 0;
+
+    margin-bottom: 7px;
+
+    border-radius: 0;
+}
+
+.campo input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #d0d5dd;
+
+    border-radius: 8px;
+
+    color: #344054;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.campo input::placeholder {
+    color: #98a2b3;
+}
+
+.campo input:focus {
+    border-color: #1769aa;
+
+    box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.12);
+}
+
+/* ============================= */
+/* TERMOS */
+/* ============================= */
+
+.termos {
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 25px 0;
+
+    color: #344054;
+
+    font-size: 14px;
+}
+
+.termos input {
+    width: 18px;
+
+    height: 18px;
+
+    cursor: pointer;
+}
+
+.termos label {
+    cursor: pointer;
+
+    color: #344054;
+
+    background: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    font-weight: normal;
+}
+
+.termos a {
+    color: #1769aa;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.termos a:hover {
+    text-decoration: underline;
+}
+
+/* ============================= */
+/* BOTÃO CADASTRO */
+/* ============================= */
+
+.btn-cadastro {
+    display: block;
+
+    margin: 0 auto;
+
+    width: 100%;
+
+    height: 48px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #1769aa;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-cadastro:hover {
+    background: #12558b;
+}
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 20px;
+    }
+
+    .logo {
+        width: 110px;
+
+        margin-bottom: 25px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 5px;
+    }
+
+    .sidebar a {
+        padding: 10px 14px;
+    }
+
+    .conteudo {
+        padding: 25px 15px;
+
+        align-items: flex-start;
+    }
+
+    .formulario-container {
+        padding: 30px 25px;
+    }
+
+    .formulario-container h1 {
+        font-size: 26px;
+    }
+
+    .termos {
+        justify-content: flex-start;
+
+        align-items: flex-start;
+    }
+
+}

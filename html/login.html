@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resolve Aqui - Login</title>
+
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <div class="login-box">
+
+            <!-- LOGO -->
+            <img src="../img/logo.png" alt="Logo Resolve Aqui" class="logo">
+
+            <!-- TÍTULO -->
+            <h1>Resolve Aqui</h1>
+
+            <p class="subtitulo">
+                gestor de demandas municipais
+            </p>
+
+            <!-- FORMULÁRIO -->
+            <form id="loginForm">
+
+                <!-- EMAIL OU CPF -->
+                <div class="campo">
+                    <label for="usuario">E-mail ou CPF</label>
+                    <input
+                        type="text"
+                        id="usuario"
+                        name="usuario"
+                        placeholder="Digite seu e-mail ou CPF"
+                        required
+                    >
+                </div>
+
+                <!-- SENHA -->
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        required
+                    >
+                </div>
+
+                <!-- BOTÕES DE ENTRADA -->
+                <div class="botoes-login">
+
+                    <button
+                        type="button"
+                        class="btn-cidadao"
+                        id="btnCidadao">
+                        Entrar como Cidadão
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn-gestor"
+                        id="btnGestor">
+                        Entrar como Gestor/Servidor
+                    </button>
+
+                </div>
+
+            </form>
+
+            <!-- RECUPERAÇÃO DE SENHA -->
+            <a href="recuperar-senha.html" class="esqueceu">
+                Esqueceu sua senha?
+            </a>
+
+            <!-- CADASTRO -->
+            <p class="cadastro">
+                Ainda não tem conta?
+                <a href="cadastro.html">Fazer cadastro</a>
+            </p>
+
+        </div>
+
+    </main>
+
+    <script src="../js/login.js"></script>
+
+</body>
+</html>

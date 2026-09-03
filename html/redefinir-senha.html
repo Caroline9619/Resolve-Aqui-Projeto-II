@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resolve Aqui - Redefinir Senha</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/redefinir-senha.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="logo-area">
+                <img src="../img/logo.png" alt="Logo Resolve Aqui">
+            </div>
+
+            <nav>
+
+    <a href="inicio.html">
+        <i class="fa-solid fa-house"></i>
+        <span>Início</span>
+    </a>
+
+    <a href="perfil.html">
+        <i class="fa-solid fa-user"></i>
+        <span>Meu Perfil</span>
+    </a>
+
+    <a href="login.html">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Sair</span>
+    </a>
+
+</nav>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+        <main class="conteudo">
+
+            <div class="card">
+
+                <h1 id="titulo">
+                    Redefinir Senha
+                </h1>
+
+
+                <!-- ÁREA DO FORMULÁRIO -->
+                <div id="areaFormulario">
+
+                    <p class="subtitulo">
+                        Informe a nova senha
+                    </p>
+
+
+                    <form id="redefinirForm">
+
+                        <!-- SENHA -->
+                        <div class="campo">
+
+                            <label for="senha">
+                                Senha
+                            </label>
+
+                            <input
+                                type="password"
+                                id="senha"
+                                placeholder="Digite sua nova senha"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- CONFIRMAÇÃO -->
+                        <div class="campo">
+
+                            <label for="confirmarSenha">
+                                Confirme a senha
+                            </label>
+
+                            <input
+                                type="password"
+                                id="confirmarSenha"
+                                placeholder="Digite novamente sua senha"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- CRITÉRIOS -->
+                        <div class="criterios">
+
+                            <p>A senha deve conter:</p>
+
+                            <p id="criterioTamanho">
+                                ❌ Pelo menos 8 caracteres
+                            </p>
+
+                            <p id="criterioMaiuscula">
+                                ❌ Pelo menos uma letra maiúscula
+                            </p>
+
+                            <p id="criterioMinuscula">
+                                ❌ Pelo menos uma letra minúscula
+                            </p>
+
+                            <p id="criterioNumero">
+                                ❌ Pelo menos um número
+                            </p>
+
+                            <p id="criterioEspecial">
+                                ❌ Pelo menos um caractere especial
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn-principal">
+                            Redefinir Senha
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- MENSAGEM DE SUCESSO -->
+                <div
+                    id="mensagemSucesso"
+                    class="mensagem sucesso">
+
+                    <h2>Redefinir Senha</h2>
+
+                    <p>
+                        Senha alterada com sucesso.
+                    </p>
+
+                    <a href="login.html" class="btn-login">
+                        Voltar ao login
+                    </a>
+
+                </div>
+
+
+                <!-- MENSAGEM DE LINK EXPIRADO -->
+                <div
+                    id="mensagemExpirada"
+                    class="mensagem expirada">
+
+                    <h2>Redefinir senha</h2>
+
+                    <p>
+                        Seu link de recuperação de senha expirou.
+                    </p>
+
+                    <a
+                        href="recuperar-senha.html"
+                        class="btn-principal">
+                        Clique aqui para solicitar um novo link
+                    </a>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="../js/redefinir-senha.js"></script>
+
+</body>
+
+</html>
