@@ -48,6 +48,7 @@ Projeto desenvolvido como parte das atividades do curso **Tecnologia em Sistemas
 ## 👩‍💻 Autoria
 
 **Adriana da Silva Santos**
+
 **Caroline da Silva Morais**
 
 
