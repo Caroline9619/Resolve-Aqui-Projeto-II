@@ -15,9 +15,7 @@ body {
     min-height: 100vh;
 }
 
-/* =========================
-   MENU LATERAL
-========================= */
+/* MENU LATERAL */
 
 .sidebar {
     width: 240px;
@@ -80,9 +78,7 @@ body {
     font-size: 17px;
 }
 
-/* =========================
-   CONTEÚDO
-========================= */
+/* CONTEÚDO */
 
 .conteudo {
     flex: 1;
@@ -94,9 +90,7 @@ body {
     padding: 40px;
 }
 
-/* =========================
-   CARD
-========================= */
+/* CARD */
 
 .card {
     width: 100%;
@@ -131,9 +125,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* =========================
-   CAMPOS
-========================= */
+/* CAMPOS */
 
 .campo {
     text-align: left;
@@ -175,9 +167,7 @@ body {
     box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.12);
 }
 
-/* =========================
-   CRITÉRIOS DA SENHA
-========================= */
+/* CRITÉRIOS DA SENHA */
 
 .criterios {
     text-align: left;
@@ -205,9 +195,7 @@ body {
     margin-bottom: 3px;
 }
 
-/* =========================
-   BOTÃO PRINCIPAL
-========================= */
+/* BOTÃO PRINCIPAL */
 
 .btn-principal {
     display: block;
@@ -241,9 +229,7 @@ body {
     background: #12558b;
 }
 
-/* =========================
-   MENSAGENS
-========================= */
+/* MENSAGENS */
 
 .mensagem {
     display: none;
@@ -275,9 +261,7 @@ body {
     display: none;
 }
 
-/* =========================
-   BOTÃO LOGIN
-========================= */
+/* BOTÃO LOGIN */
 
 .btn-login {
     display: inline-block;
@@ -301,9 +285,7 @@ body {
     background: #12558b;
 }
 
-/* =========================
-   RESPONSIVO
-========================= */
+/* RESPONSIVO */
 
 @media (max-width: 768px) {
 

@@ -10,18 +10,13 @@ body {
     min-height: 100vh;
 }
 
-/* ============================= */
 /* LAYOUT PRINCIPAL */
-/* ============================= */
-
 .container {
     display: flex;
     min-height: 100vh;
 }
 
-/* ============================= */
 /* MENU LATERAL */
-/* ============================= */
 
 .sidebar {
     width: 240px;
@@ -84,9 +79,9 @@ body {
     font-size: 17px;
 }
 
-/* ============================= */
+
 /* CONTEÚDO */
-/* ============================= */
+
 
 .conteudo {
     flex: 1;
@@ -100,9 +95,9 @@ body {
     padding: 40px;
 }
 
-/* ============================= */
-/* CARTÃO DO FORMULÁRIO */
-/* ============================= */
+
+/* FORMULÁRIO */
+
 
 .formulario-container {
     width: 100%;
@@ -118,9 +113,7 @@ body {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* ============================= */
 /* TÍTULO */
-/* ============================= */
 
 .formulario-container h1 {
     text-align: center;
@@ -148,9 +141,9 @@ form {
     width: 100%;
 }
 
-/* ============================= */
+
 /* CAMPOS */
-/* ============================= */
+
 
 .campo {
     margin-bottom: 20px;
@@ -206,9 +199,7 @@ form {
     box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.12);
 }
 
-/* ============================= */
 /* TERMOS */
-/* ============================= */
 
 .termos {
     display: flex;
@@ -260,9 +251,7 @@ form {
     text-decoration: underline;
 }
 
-/* ============================= */
 /* BOTÃO CADASTRO */
-/* ============================= */
 
 .btn-cadastro {
     display: block;
@@ -296,9 +285,7 @@ form {
     background: #12558b;
 }
 
-/* ============================= */
 /* RESPONSIVIDADE */
-/* ============================= */
 
 @media (max-width: 768px) {
 

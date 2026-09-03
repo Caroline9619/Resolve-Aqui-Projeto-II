@@ -1,17 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    /*
-     * ================================
-     * NOME DO USUÁRIO
-     * ================================
-     *
-     * Por enquanto estamos utilizando
-     * um nome de exemplo.
-     *
-     * Posteriormente esse nome será
-     * carregado do banco de dados
-     * após o login do cidadão.
-     */
+    /*NOME DO USUÁRIO*/
 
     const nomeUsuario = document.getElementById("nomeUsuario");
 
@@ -20,18 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     nomeUsuario.textContent = nome;
 
 
-    /*
-     * ================================
-     * OCORRÊNCIAS
-     * ================================
-     *
-     * Estes registros são apenas
-     * exemplos para visualizar
-     * o funcionamento da tela.
-     *
-     * Posteriormente serão buscados
-     * no banco de dados.
-     */
+    /* OCORRÊNCIAS*/
 
     const ocorrencias = [
         {
@@ -57,11 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
 
-    /*
-     * Futuramente esta função poderá
-     * receber os dados diretamente
-     * da API / banco de dados.
-     */
+    /* receber os dados diretamente da API / banco de dados. */
 
     function carregarOcorrencias() {
 

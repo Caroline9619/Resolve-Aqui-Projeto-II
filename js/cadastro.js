@@ -1,6 +1,4 @@
-// =========================================
 // ELEMENTOS DO FORMULÁRIO
-// =========================================
 
 const form = document.getElementById("cadastroForm");
 
@@ -8,9 +6,7 @@ const cpf = document.getElementById("cpf");
 
 const celular = document.getElementById("celular");
 
-// =========================================
 // MÁSCARA CPF
-// =========================================
 
 cpf.addEventListener("input", () => {
 
@@ -49,9 +45,7 @@ cpf.value = valor;
 
 });
 
-// =========================================
 // MÁSCARA CELULAR
-// =========================================
 
 celular.addEventListener("input", () => {
 
@@ -86,9 +80,7 @@ celular.value = valor;
 
 });
 
-// =========================================
 // VALIDAÇÃO DO FORMULÁRIO
-// =========================================
 
 form.addEventListener("submit", (e) => {
 

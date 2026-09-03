@@ -1,6 +1,4 @@
-/* =========================
-   CONFIGURAÇÕES GERAIS
-========================= */
+/* CONFIGURAÇÕES GERAIS*/
 
 * {
     margin: 0;
@@ -20,9 +18,7 @@ body {
 }
 
 
-/* =========================
-   MENU LATERAL
-========================= */
+/* MENU LATERAL */
 
 .sidebar {
     width: 240px;
@@ -107,9 +103,7 @@ body {
 }
 
 
-/* =========================
-   CONTEÚDO PRINCIPAL
-========================= */
+/* CONTEÚDO PRINCIPAL*/
 
 .conteudo {
     flex: 1;
@@ -122,9 +116,7 @@ body {
 }
 
 
-/* =========================
-   CABEÇALHO
-========================= */
+/*CABEÇALHO */
 
 .cabecalho {
     text-align: center;
@@ -153,9 +145,7 @@ body {
 }
 
 
-/* =========================
-   NOVA OCORRÊNCIA
-========================= */
+/* NOVA OCORRÊNCIA */
 
 .nova-ocorrencia {
     display: flex;
@@ -200,9 +190,7 @@ body {
 }
 
 
-/* =========================
-   MINHAS OCORRÊNCIAS
-========================= */
+/* MINHAS OCORRÊNCIAS */
 
 .ocorrencias {
     width: 100%;
@@ -217,9 +205,7 @@ body {
 }
 
 
-/* =========================
-   LISTA
-========================= */
+/* LISTA */
 
 .lista-ocorrencias {
     display: flex;
@@ -230,9 +216,7 @@ body {
 }
 
 
-/* =========================
-   CARD DA OCORRÊNCIA
-========================= */
+/* CARD DA OCORRÊNCIA */
 
 .ocorrencia-card {
     width: 100%;
@@ -278,9 +262,7 @@ body {
 }
 
 
-/* =========================
-   INFORMAÇÕES
-========================= */
+/* INFORMAÇÕES */
 
 .informacoes {
     display: flex;
@@ -301,9 +283,7 @@ body {
 }
 
 
-/* =========================
-   STATUS
-========================= */
+/* STATUS */
 
 .status {
     min-width: 105px;
@@ -347,9 +327,7 @@ body {
 }
 
 
-/* =========================
-   RESPONSIVO
-========================= */
+/* RESPONSIVO */
 
 @media (max-width: 768px) {
 
