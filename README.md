@@ -1,7 +1,7 @@
  # Resolve Aqui: Gestor de Demandas Municipais
 
 ##  Sobre o projeto
-É uma **Plataforma Web** que se caracteriza por ser uma maneira objetiva de estruturar as demandas dos moradores com as possibilidades de resolução da gestão, em que com o recebimento das ocorrências, organização, classificação e acompanhamento das respostas para agendamento de soluções de acordo com a prioridade da demanda citada, oferecendo soluções adequadas ou encaminhamentos para órgãos e entidades competentes que possam despachar corretamente.
+É uma **Plataforma Web** que se caracteriza por ser uma maneira objetiva de estruturar as demandas dos moradores com a possibilidade de resolução pela gestão, em que com o recebimento das ocorrências, organização, classificação e acompanhamento das respostas para agendamento de soluções de acordo com a prioridade da demanda citada, oferece soluções adequadas ou encaminhamentos para os órgãos e entidades competentes que possam despachar corretamente.
 
 
 ##  Objetivos
@@ -10,7 +10,7 @@
 
 *  Permitir a classificação das ocorrências de acordo com o grau de prioridade e complexidade.
 
-   Facilitar o acompanhamento das respostas e soluções, com possibilidade de agendamento e monitoramento de prazos.
+*  Facilitar o acompanhamento das respostas e soluções, com possibilidade de agendamento e monitoramento de prazos.
 
 *  Encaminhar demandas para órgãos ou entidades competentes quando necessário, garantindo a correta destinação das solicitações.
 
@@ -35,7 +35,7 @@ O projeto utiliza inicialmente as seguintes tecnologias:
 
 Projeto desenvolvido como parte das atividades do curso **Tecnologia em Sistemas para Internet**.
 
-**Projeto:** Resolve Aqui: gestor de demandas municipais – Projeto II.
+**Projeto:** Resolve Aqui: gestor de demandas municipais – Projeto Integrador II.
 
 
 ##  Autoria
