@@ -25,11 +25,10 @@ O projeto utiliza inicialmente as seguintes tecnologias:
 
 **HTML5** para estrutura das páginas;            
 **CSS3** para estilização e responsividade;     
-**JavaScript** para interatividade e funcionalidades; 
-**Font Awesome** para os ícones da interface;              
+**JavaScript** para interatividade e funcionalidades;          
 **Git** para o controle de versão;               
 **GitHub** para hospedagem do código-fonte;     
-
+**Font Awesome** para os ícones da interface; 
 
 ##  Projeto Acadêmico
 
