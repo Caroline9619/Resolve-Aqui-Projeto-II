@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resolve Aqui - Nova Ocorrência</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/nova-ocorrencia.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- MENU LATERAL -->
+
+        <aside class="sidebar">
+
+            <div class="logo-area">
+                <img src="../img/logo.png" alt="Resolve Aqui">
+            </div>
+
+            <nav>
+
+                                <a href="perfil.html">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Minhas Ocorrências</span>
+                </a>
+
+                <a href="login.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Sair</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+
+        <main class="conteudo">
+
+            <div class="card">
+
+                <h1>Cadastro de Ocorrência</h1>
+
+                <p class="subtitulo">
+                    Registre uma ocorrência para que a secretaria responsável
+                    possa analisar e atender sua solicitação ou encaminhar ao órgão competente.
+                </p>
+
+                <form id="ocorrenciaForm">
+
+                    <!-- Categoria -->
+
+                    <div class="campo">
+
+                        <label for="categoria">
+                            Categoria da Ocorrência
+                        </label>
+
+                        <select id="categoria" required>
+
+                            <option value="">Selecione uma categoria</option>
+
+                            <option>Via Pública e Pavimentação</option>
+                            <option>Iluminação Pública</option>
+                            <option>Limpeza Urbana e Resíduos</option>
+                            <option>Parques e Praças</option>
+                            <option>Saneamento e Água</option>
+                            <option>Trânsito e Mobilidade</option>
+                            <option>Vigilância Sanitária e Zoonoses</option>
+                            <option>Ordem Pública e Fiscalização</option>
+                            <option>Prédios e Equipamentos Públicos</option>
+                            <option>Saúde</option>
+                            <option>Segurança</option>
+                            <option>Educação</option>
+                            <option>Conduta dos Servidores</option>
+                            <option>Conduta da Adminitração</option>
+                            <option>Outros</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Descrição -->
+
+                    <div class="campo">
+
+                        <label for="descricao">
+                            Descrição da Ocorrência
+                        </label>
+
+                        <textarea
+                            id="descricao"
+                            rows="5"
+                            placeholder="Descreva detalhadamente a ocorrência."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- Localização -->
+
+                    <div class="campo">
+
+                        <label for="endereco">
+                            Endereço da Ocorrência
+                        </label>
+
+                        <input
+                            type="text"
+                            id="endereco"
+                            placeholder="Informe o endereço da ocorrência"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Mapa -->
+
+                    <div class="campo">
+
+                        <label>
+                            Localização no mapa
+                        </label>
+
+                        <box background="#eef5fb" border={{size:1,color:"#c8d8ea"}} radius=lg padding=4 gap=3 align=center>
+                            <icon name=map-pin color=info size=2xl/>
+
+                            <box gap=1 align=center>
+                                <text textAlign=center strong>Selecione o ponto exato da ocorrência no mapa</text>
+                                
+                            </box>
+
+                            <button variant=outline>Selecionar localização</button>
+                        </box>
+
+                    </div>
+
+
+                    <!-- Anexos -->
+
+                    <div class="campo">
+
+    <label for="anexos">
+        Anexos (Fotos, Vídeos e Arquivos)
+    </label>
+
+    <input
+        type="file"
+        id="anexos"
+        name="anexos"
+        multiple
+        accept="image/*,video/*,.pdf,.doc,.docx,.xls,.xlsx,.txt"
+    >
+
+    <p class="info-arquivo">
+        Você pode anexar fotos, vídeos, PDF, Word, Excel e arquivos de texto.
+    </p>
+
+</div>
+
+                    <!-- Botão -->
+
+                    <button
+                        type="submit"
+                        class="btn-principal"
+                    >
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Enviar Ocorrência
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="../js/nova-ocorrencia.js"></script>
+
+</body>
+
+</html>

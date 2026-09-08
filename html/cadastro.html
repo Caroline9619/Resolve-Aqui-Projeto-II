@@ -34,16 +34,7 @@
 
         <nav>
 
-    <a href="inicio.html">
-        <i class="fa-solid fa-house"></i>
-        <span>Início</span>
-    </a>
-
-    <a href="perfil.html">
-        <i class="fa-solid fa-user"></i>
-        <span>Meu Perfil</span>
-    </a>
-
+       
     <a href="login.html">
         <i class="fa-solid fa-right-from-bracket"></i>
         <span>Sair</span>
@@ -56,12 +47,67 @@
 
         <div class="formulario-container">
 
-            <h1>Cadastro do Cidadão</h1>
+            <h1>Cadastro do Usuário </h1>
 
             <p class="subtitulo">
-                Crie sua conta para acessar o Resolve Aqui
+                Escolha o tipo de conta e preencha as informações para acessar o Resolve Aqui.
             </p>
+<!-- TIPO DE CONTA -->
 
+<div class="campo">
+
+    <label>Tipo de Conta</label>
+
+    <div class="tipo-conta">
+
+        <label class="opcao-perfil">
+
+            <input
+                type="radio"
+                name="perfil"
+                value="cidadao"
+                checked
+            >
+
+            <i class="fa-solid fa-circle-user"></i>
+
+            <span>Cidadão</span>
+
+        </label>
+
+
+        <label class="opcao-perfil">
+
+            <input
+                type="radio"
+                name="perfil"
+                value="servidor"
+            >
+
+            <i class="fa-solid fa-user-tie"></i>
+
+            <span>Servidor</span>
+
+        </label>
+
+
+        <label class="opcao-perfil">
+
+            <input
+                type="radio"
+                name="perfil"
+                value="gestao"
+            >
+
+            <i class="fa-solid fa-building"></i>
+
+            <span>Gestão Municipal</span>
+
+        </label>
+
+    </div>
+
+</div>
             <form id="cadastroForm">
 
                 <!-- NOME -->
@@ -136,7 +182,72 @@
                     >
 
                 </div>
+<!-- CAMPOS EXCLUSIVOS -->
 
+<div id="camposFuncionario" class="campos-funcionario oculto">
+
+    <div class="campo">
+
+        <label for="matricula">
+            Matrícula Funcional
+        </label>
+
+        <input
+            type="text"
+            id="matricula"
+            placeholder="Informe sua matrícula"
+        >
+
+    </div>
+
+
+    <div class="campo">
+
+        <label for="secretaria">
+            Secretaria
+        </label>
+
+        <select id="secretaria">
+
+            <option value="">
+                Selecione
+            </option>
+
+            <option>Secretaria de Obras</option>
+            <option>Secretaria de Saúde</option>
+            <option>Secretaria de Educação</option>
+            <option>Secretaria de Meio Ambiente</option>
+            <option>Secretaria de Assistência Social</option>
+            <option>Secretaria de Administração</option>
+
+        </select>
+
+    </div>
+
+
+    <div class="campo" id="cargoGestao" style="display:none;">
+
+        <label for="cargo">
+            Cargo de Gestão
+        </label>
+
+        <select id="cargo">
+
+            <option value="">
+                Selecione
+            </option>
+
+            <option>Secretário Municipal</option>
+            <option>Secretário Adjunto</option>
+            <option>Prefeito</option>
+            <option>Vice-Prefeito</option>
+            <option>Coordenador</option>
+
+        </select>
+
+    </div>
+
+</div>
                 <!-- SENHA -->
 
                 <div class="campo">
@@ -211,7 +322,7 @@
 <!-- JAVASCRIPT -->
 
 <script src="../js/cadastro.js"></script>
-```
+
 
 </body>
 

@@ -342,3 +342,94 @@ form {
     }
 
 }
+/* TIPO DE CONTA*/
+
+.tipo-conta{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+    margin-top:10px;
+
+}
+
+.opcao-perfil{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:18px;
+
+    background:#f6f8fb;
+
+    border:2px solid #d0d5dd;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    text-align:center;
+
+}
+
+.opcao-perfil i{
+
+    font-size:28px;
+
+    color:#1769aa;
+
+}
+
+.opcao-perfil input{
+
+    position:absolute;
+
+    opacity:0;
+
+}
+
+.opcao-perfil:has(input:checked){
+
+    border-color:#1769aa;
+
+    background:#e8f1fb;
+
+}
+
+.campos-funcionario{
+
+    margin-top:10px;
+
+}
+
+.oculto{
+
+    display:none;
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.tipo-conta{
+
+grid-template-columns:1fr;
+
+}
+
+}

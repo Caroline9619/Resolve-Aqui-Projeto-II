@@ -1,0 +1,165 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7fb;
+    color:#333;
+}
+
+.layout{
+    display:flex;
+    min-height:100vh;
+}
+
+/* MENU */
+
+.sidebar{
+    width:240px;
+    background:#163b70;
+    padding:30px 20px;
+}
+
+.logo-area{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.logo-area img{
+    width:130px;
+}
+
+.sidebar nav{
+    display:flex;
+    flex-direction:column;
+}
+
+.sidebar nav a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    border-radius:8px;
+    transition:.2s;
+}
+
+.sidebar nav a:hover{
+    background:rgba(255,255,255,.15);
+}
+
+/* CONTEÚDO */
+
+.conteudo{
+    flex:1;
+    padding:40px;
+}
+
+.cabecalho{
+    margin-bottom:30px;
+}
+
+.cabecalho h1{
+    color:#163b70;
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.cabecalho p{
+    color:#666;
+}
+
+/* CARDS */
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:28px;
+    margin-bottom:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.titulo-secao{
+    margin-bottom:20px;
+}
+
+.titulo-secao h2{
+    color:#163b70;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* OPÇÕES */
+
+.lista-opcoes{
+    display:flex;
+    flex-direction:column;
+}
+
+.opcao{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:16px;
+    text-decoration:none;
+    color:#333;
+    border-radius:10px;
+    transition:.2s;
+}
+
+.opcao:hover{
+    background:#eef5fb;
+}
+
+.opcao i:first-child{
+    width:22px;
+    text-align:center;
+    color:#1769aa;
+}
+
+.seta{
+    margin-left:auto;
+    color:#999;
+}
+
+.excluir{
+    color:#b42335;
+}
+
+.excluir i:first-child{
+    color:#b42335;
+}
+
+.versao{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:18px 16px 8px;
+    color:#666;
+    font-size:14px;
+    border-top:1px solid #e5e9ef;
+    margin-top:10px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    .layout{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+    }
+
+    .conteudo{
+        padding:25px 15px;
+    }
+
+}

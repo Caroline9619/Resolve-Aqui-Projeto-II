@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolve Aqui - Órgão Competente</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/orgao-competente.css">
+</head>
+
+<body>
+
+    <main class="conteudo">
+
+        <div class="card">
+
+            <div class="icone-topo">
+                <i class="fa-solid fa-building"></i>
+            </div>
+
+            <h1>Órgão Competente</h1>
+
+            <p class="subtitulo">
+                Informe os dados do órgão ou empresa responsável pelo atendimento desta ocorrência.
+            </p>
+
+            <form id="formOrgao">
+
+                <div class="campo">
+                    <label for="nomeOrgao">Nome da Empresa ou Órgão</label>
+                    <input
+                        type="text"
+                        id="nomeOrgao"
+                        placeholder="Digite o nome oficial"
+                        required>
+                </div>
+
+                <div class="campo">
+
+                    <label>Tipo de Órgão</label>
+
+                    <div class="tipo-orgao">
+
+                        <label class="opcao">
+
+                            <input
+                                type="radio"
+                                name="tipo"
+                                value="Público"
+                                required>
+
+                            <i class="fa-solid fa-landmark"></i>
+
+                            <span>Público</span>
+
+                        </label>
+
+                        <label class="opcao">
+
+                            <input
+                                type="radio"
+                                name="tipo"
+                                value="Privado">
+
+                            <i class="fa-solid fa-building"></i>
+
+                            <span>Privado</span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="contato@orgao.gov.br"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label for="endereco">Endereço</label>
+                    <input
+                        type="text"
+                        id="endereco"
+                        placeholder="Informe o endereço"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input
+                        type="tel"
+                        id="telefone"
+                        placeholder="(00) 00000-0000"
+                        maxlength="15"
+                        required>
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn-principal">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Encaminhar ao Órgão Competente
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <script src="../js/orgao-competente.js"></script>
+
+</body>
+</html>
