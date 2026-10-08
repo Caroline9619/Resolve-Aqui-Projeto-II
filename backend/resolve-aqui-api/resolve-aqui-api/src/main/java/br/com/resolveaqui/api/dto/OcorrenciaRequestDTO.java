@@ -23,7 +23,9 @@ public record OcorrenciaRequestDTO(
         String prioridade,
 
         @NotNull(message = "ID do usuário é obrigatório")
-        Long usuarioId
+        Long usuarioId,
+
+        Long orgaoId
 
 ) {
 }

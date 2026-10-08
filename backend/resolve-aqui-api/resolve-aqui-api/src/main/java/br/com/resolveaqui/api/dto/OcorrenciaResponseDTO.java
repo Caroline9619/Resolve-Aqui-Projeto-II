@@ -1,5 +1,6 @@
 package br.com.resolveaqui.api.dto;
 
+import br.com.resolveaqui.api.enums.Prioridade;
 import br.com.resolveaqui.api.model.Ocorrencia;
 
 public record OcorrenciaResponseDTO(
@@ -9,9 +10,10 @@ public record OcorrenciaResponseDTO(
         String categoria,
         String localizacao,
         String fotoVideo,
-        String prioridade,
+        Prioridade prioridade,
         String status,
-        Long usuarioId
+        Long usuarioId,
+        Long orgaoId
 ) {
 
     public static OcorrenciaResponseDTO fromEntity(Ocorrencia ocorrencia) {
@@ -25,7 +27,10 @@ public record OcorrenciaResponseDTO(
                 ocorrencia.getFotoVideo(),
                 ocorrencia.getPrioridade(),
                 ocorrencia.getStatus(),
-                ocorrencia.getUsuario().getId()
+                ocorrencia.getUsuario().getId(),
+                ocorrencia.getOrgao() != null
+                        ? ocorrencia.getOrgao().getId()
+                        : null
         );
     }
 }
