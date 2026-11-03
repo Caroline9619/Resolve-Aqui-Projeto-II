@@ -2,6 +2,7 @@ package br.com.resolveaqui.api.model;
 
 import jakarta.persistence.*;
 import br.com.resolveaqui.api.enums.Prioridade;
+import br.com.resolveaqui.api.enums.StatusOcorrencia;
 
 @Entity
 @Table(name = "ocorrencias")
@@ -30,8 +31,9 @@ public class Ocorrencia {
     @Column(nullable = false, length = 20)
     private Prioridade prioridade;
 
-    @Column(nullable = false, length = 30)
-    private String status;
+    @Enumerated(EnumType.STRING)
+@Column(nullable = false, length = 30)
+private StatusOcorrencia status;
 
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false)
@@ -51,7 +53,7 @@ public class Ocorrencia {
             String localizacao,
             String fotoVideo,
             Prioridade prioridade,
-            String status,
+           StatusOcorrencia status,
             Usuario usuario,
             Orgao orgao) {
 
@@ -118,13 +120,13 @@ public class Ocorrencia {
         this.prioridade = prioridade;
     }
 
-    public String getStatus() {
-        return status;
-    }
+   public StatusOcorrencia getStatus() {
+    return status;
+}
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
+   public void setStatus(StatusOcorrencia status) {
+    this.status = status;
+}
 
     public Usuario getUsuario() {
         return usuario;

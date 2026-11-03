@@ -1,9 +1,12 @@
+
 package br.com.resolveaqui.api.controller;
 
 import br.com.resolveaqui.api.dto.OcorrenciaRequestDTO;
 import br.com.resolveaqui.api.dto.OcorrenciaResponseDTO;
 import br.com.resolveaqui.api.service.OcorrenciaService;
+
 import jakarta.validation.Valid;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,7 +33,11 @@ public class OcorrenciaController {
 
     @GetMapping
     public ResponseEntity<List<OcorrenciaResponseDTO>> listarTodos() {
-
         return ResponseEntity.ok(service.listarTodos());
+    }
+
+    @GetMapping("/minhas")
+    public ResponseEntity<List<OcorrenciaResponseDTO>> listarMinhas() {
+        return ResponseEntity.ok(service.listarMinhas());
     }
 }

@@ -2,6 +2,7 @@ package br.com.resolveaqui.api.dto;
 
 import br.com.resolveaqui.api.enums.Prioridade;
 import br.com.resolveaqui.api.model.Ocorrencia;
+import br.com.resolveaqui.api.enums.StatusOcorrencia;
 
 public record OcorrenciaResponseDTO(
         Long id,
@@ -11,7 +12,7 @@ public record OcorrenciaResponseDTO(
         String localizacao,
         String fotoVideo,
         Prioridade prioridade,
-        String status,
+        StatusOcorrencia status,
         Long usuarioId,
         Long orgaoId
 ) {

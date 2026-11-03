@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolve Aqui - Histórico da Ocorrência</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/historico-ocorrencia.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- MENU LATERAL -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+            <img src="../img/logo.png" alt="Resolve Aqui">
+        </div>
+
+        <nav>
+
+            <a href="login.html">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sair</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- CONTEÚDO -->
+
+    <main class="conteudo">
+
+        <div class="card">
+
+            <h1>Histórico da Ocorrência</h1>
+
+            <p class="subtitulo">
+                Acompanhe todas as movimentações realizadas na sua solicitação.
+            </p>
+
+            <!-- PROTOCOLO -->
+
+            <div class="protocolo-box">
+
+                <span>Número do Protocolo</span>
+
+                <strong id="protocolo">
+                    RA-2026-000123
+                </strong>
+
+            </div>
+
+            <!-- TABELA -->
+
+            <div class="tabela-container">
+
+                <table id="tabelaHistorico">
+
+                    <thead>
+
+                        <tr>
+                            <th>Data da Movimentação</th>
+                            <th>Perfil</th>
+                            <th>Ação Realizada</th>
+                            <th>Status Final</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>04/09/2026 09:15</td>
+                            <td>Cidadão</td>
+                            <td>Ocorrência registrada.</td>
+                            <td>Recebida</td>
+                        </tr>
+
+                        <tr>
+                            <td>04/09/2026 10:40</td>
+                            <td>Servidor</td>
+                            <td>Classificação de prioridade Alta.</td>
+                            <td>Em análise</td>
+                        </tr>
+
+                        <tr>
+                            <td>05/09/2026 08:30</td>
+                            <td>Gestão Municipal</td>
+                            <td>Prazo definido para resolução.</td>
+                            <td>Em andamento</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- BOTÃO -->
+
+            <button id="btnRelatorio" class="btn-principal">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+                Gerar Relatório com Histórico da Ocorrência
+
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- Biblioteca para gerar PDF -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="../js/historico-ocorrencia.js"></script>
+
+</body>
+
+</html>

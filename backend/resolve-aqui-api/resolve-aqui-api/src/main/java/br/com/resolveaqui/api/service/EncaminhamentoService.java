@@ -10,6 +10,7 @@ import br.com.resolveaqui.api.repository.OcorrenciaRepository;
 import br.com.resolveaqui.api.repository.OrgaoRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import br.com.resolveaqui.api.enums.StatusOcorrencia;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -57,7 +58,7 @@ public class EncaminhamentoService {
         Encaminhamento encaminhamentoSalvo =
                 repository.save(encaminhamento);
 
-        ocorrencia.setStatus("encaminhada");
+        ocorrencia.setStatus(StatusOcorrencia.ENCAMINHADA);
         ocorrenciaRepository.save(ocorrencia);
 
         return EncaminhamentoResponseDTO.fromEntity(

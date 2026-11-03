@@ -1,3 +1,4 @@
+
 package br.com.resolveaqui.api.dto;
 
 import jakarta.validation.constraints.NotBlank;
@@ -21,9 +22,6 @@ public record OcorrenciaRequestDTO(
 
         @NotBlank(message = "Prioridade é obrigatória")
         String prioridade,
-
-        @NotNull(message = "ID do usuário é obrigatório")
-        Long usuarioId,
 
         Long orgaoId
 

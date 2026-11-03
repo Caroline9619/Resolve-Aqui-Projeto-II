@@ -3,6 +3,8 @@ package br.com.resolveaqui.api.controller;
 import br.com.resolveaqui.api.dto.UsuarioRequestDTO;
 import br.com.resolveaqui.api.dto.UsuarioResponseDTO;
 import br.com.resolveaqui.api.service.UsuarioService;
+import br.com.resolveaqui.api.dto.LoginRequestDTO;
+import br.com.resolveaqui.api.dto.LoginResponseDTO;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -33,4 +35,13 @@ public class UsuarioController {
 
         return ResponseEntity.ok(service.listarTodos());
     }
+    
+    @PostMapping("/login")
+public ResponseEntity<LoginResponseDTO> login(
+        @Valid @RequestBody LoginRequestDTO dto) {
+
+    LoginResponseDTO resposta = service.login(dto);
+
+    return ResponseEntity.ok(resposta);
+}
 }

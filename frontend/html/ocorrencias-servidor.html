@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolve Aqui - Painel de Ocorrências</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/ocorrencias-servidor.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- MENU LATERAL -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+            <img src="../img/logo.png" alt="Resolve Aqui">
+        </div>
+
+        <nav>
+
+                        <a href="ocorrencias-servidor.html" class="ativo">
+                <i class="fa-solid fa-clipboard-list"></i>
+                Ocorrências
+            </a>
+<a href="configuracoes.html">
+        <i class="fa-solid fa-gear"></i>
+        <span>Configurações</span>
+    </a>
+            <a href="login.html">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Sair
+            </a>
+
+        </nav>
+<!-- PAINEL DE ALERTAS -->
+
+<div class="alertas-card">
+
+    <h3>
+        <i class="fa-solid fa-bell"></i>
+        Alertas
+    </h3>
+
+    <div class="alerta-item atrasada">
+
+        <i class="fa-solid fa-circle-exclamation"></i>
+
+        <div>
+
+            <strong id="qtdAtrasadas">2</strong>
+
+            <p>Demandas atrasadas</p>
+
+        </div>
+
+    </div>
+
+    <div class="alerta-item vencimento">
+
+        <i class="fa-solid fa-clock"></i>
+
+        <div>
+
+            <strong id="qtdVencendo">3</strong>
+
+            <p>Próximas do vencimento</p>
+
+        </div>
+
+    </div>
+
+    <button id="btnVerPrioridades" class="btn-alertas">
+        Ver prioridades
+    </button>
+
+</div>
+    </aside>
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="conteudo">
+
+        <h1>Ocorrências Cadastradas</h1>
+
+        <p class="subtitulo">
+            Visualize e filtre as ocorrências enviadas pelos cidadãos.
+        </p>
+
+
+        <!-- FILTROS -->
+
+        <div class="filtros-card">
+
+            <h2>Filtros</h2>
+
+            <div class="filtros">
+
+                <div class="campo">
+
+                    <label>Prioridade</label>
+
+                    <select id="filtroPrioridade">
+
+                        <option>Todas</option>
+                        <option>Baixa</option>
+                        <option>Média</option>
+                        <option>Alta</option>
+                        <option>Crítica</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label>Categoria</label>
+
+                    <select id="filtroCategoria">
+
+                        <option>Todas</option>
+                        <option>Via Pública e Pavimentação</option>
+                        <option>Iluminação Pública</option>
+                        <option>Limpeza Urbana e Resíduos</option>
+                        <option>Parques e Praças</option>
+                        <option>Saneamento e Água</option>
+                        <option>Trânsito e Mobilidade</option>
+                        <option>Vigilância Sanitária e Zoonoses</option>
+                        <option>Ordem Pública e Fiscalização</option>
+                        <option>Prédios e Equipamentos Públicos</option>
+                        <option>Saúde</option>
+                        <option>Segurança</option>
+                        <option>Educação</option>
+                        <option>Conduta dos Servidores</option>
+                        <option>Outros</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label>Status</label>
+
+                    <select id="filtroStatus">
+
+                        <option>Todos</option>
+                        <option>Recebida</option>
+                        <option>Em análise</option>
+                        <option>Em andamento</option>
+                        <option>Resolvida</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TABELA -->
+
+        <div class="tabela-card">
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Selecionar</th>
+                <th>Protocolo</th>
+                <th>Categoria</th>
+                <th>Prioridade</th>
+                <th>Status</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="tabelaOcorrencias">
+
+            <tr>
+                <td>
+                    <input
+                        type="radio"
+                        name="demandaSelecionada"
+                        value="RA-2026-000123"
+                    >
+                </td>
+
+                <td>RA-2026-000123</td>
+
+                <td>Via Pública e Pavimentação</td>
+
+                <td>
+                    <span class="prioridade alta">
+                        Alta
+                    </span>
+                </td>
+
+                <td>
+                    <span class="status analise">
+                        Em análise
+                    </span>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <input
+                        type="radio"
+                        name="demandaSelecionada"
+                        value="RA-2026-000098"
+                    >
+                </td>
+
+                <td>RA-2026-000098</td>
+
+                <td>Iluminação Pública</td>
+
+                <td>
+                    <span class="prioridade media">
+                        Média
+                    </span>
+                </td>
+
+                <td>
+                    <span class="status andamento">
+                        Em andamento
+                    </span>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <input
+                        type="radio"
+                        name="demandaSelecionada"
+                        value="RA-2026-000075"
+                    >
+                </td>
+
+                <td>RA-2026-000075</td>
+
+                <td>Limpeza Urbana e Resíduos</td>
+
+                <td>
+                    <span class="prioridade baixa">
+                        Baixa
+                    </span>
+                </td>
+
+                <td>
+                    <span class="status resolvida">
+                        Resolvida
+                    </span>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <input
+                        type="radio"
+                        name="demandaSelecionada"
+                        value="RA-2026-000150"
+                    >
+                </td>
+
+                <td>RA-2026-000150</td>
+
+                <td>Segurança</td>
+
+                <td>
+                    <span class="prioridade urgente">
+                        Urgente
+                    </span>
+                </td>
+
+                <td>
+                    <span class="status recebida">
+                        Recebida
+                    </span>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <!-- BOTÃO ANALISAR -->
+
+    <div class="area-analisar">
+
+        <button
+            type="button"
+            id="btnAnalisar"
+            class="btn-analisar"
+        >
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Analisar
+        </button>
+
+    </div>
+
+</div>
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/ocorrencias-servidor.js"></script>
+
+</body>
+</html>

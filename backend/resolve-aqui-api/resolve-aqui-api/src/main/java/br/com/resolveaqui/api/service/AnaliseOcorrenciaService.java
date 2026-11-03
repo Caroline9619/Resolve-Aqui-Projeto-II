@@ -8,6 +8,7 @@ import br.com.resolveaqui.api.repository.AnaliseOcorrenciaRepository;
 import br.com.resolveaqui.api.repository.OcorrenciaRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import br.com.resolveaqui.api.enums.StatusOcorrencia;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -45,7 +46,7 @@ public class AnaliseOcorrenciaService {
 
         AnaliseOcorrencia analiseSalva = repository.save(analise);
 
-        ocorrencia.setStatus("em análise");
+       ocorrencia.setStatus(StatusOcorrencia.EM_ANALISE);
         ocorrenciaRepository.save(ocorrencia);
 
         return AnaliseOcorrenciaResponseDTO.fromEntity(analiseSalva);

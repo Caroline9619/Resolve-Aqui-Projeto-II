@@ -1,0 +1,19 @@
+﻿# Java e Maven
+**/target/
+**/build/
+*.class
+
+# Arquivos temporários e logs
+*.log
+hs_err_pid*.log
+
+# Arquivos compactados de backup
+/backend/resolve-aqui-api.zip
+
+# Configurações locais e segredos
+.env
+.env.*
+**/application-dev.properties
+
+# Configurações do VS Code
+.vscode/

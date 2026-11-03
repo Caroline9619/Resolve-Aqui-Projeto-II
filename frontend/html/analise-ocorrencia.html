@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resolve Aqui - Ocorrência</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/analise-ocorrencia.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- MENU LATERAL -->
+
+        <aside class="sidebar">
+
+            <div class="logo-area">
+                <img src="../img/logo.png" alt="Logo Resolve Aqui">
+            </div>
+
+            <nav>
+
+                <a href="login.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Início</span>
+                </a>
+
+                <a href="ocorrencias-servidor.html" class="ativo">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Ocorrências</span>
+                </a>
+
+                
+                <a href="login.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Sair</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+
+        <main class="conteudo">
+
+            <h1>Ocorrência</h1>
+
+            <p class="subtitulo">
+                Analise as informações da ocorrência e defina as providências necessárias.
+            </p>
+
+
+            <!-- INFORMAÇÕES PRINCIPAIS -->
+
+            <section class="informacoes-principais">
+
+                <div class="info-card">
+
+                    <span class="rotulo">
+                        Número de Protocolo
+                    </span>
+
+                    <strong id="protocolo">
+                        RA-2026-000123
+                    </strong>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="rotulo">
+                        Status Inicial
+                    </span>
+
+                    <span class="status recebida" id="statusInicial">
+                        Recebida
+                    </span>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="rotulo">
+                        Categoria
+                    </span>
+
+                    <strong id="categoria">
+                        Via Pública e Pavimentação
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+            <!-- DESCRIÇÃO -->
+
+            <section class="card">
+
+                <h2>
+                    <i class="fa-solid fa-align-left"></i>
+                    Descrição da Ocorrência
+                </h2>
+
+                <div class="descricao" id="descricao">
+                    Foi identificado um buraco de grande dimensão
+                    na via pública, dificultando a circulação de veículos
+                    e oferecendo risco aos moradores.
+                </div>
+
+            </section>
+
+
+            <!-- ANEXOS -->
+
+            <section class="card">
+
+                <h2>
+                    <i class="fa-solid fa-paperclip"></i>
+                    Anexos Enviados
+                </h2>
+
+                <div class="anexos" id="listaAnexos">
+
+                    <div class="anexo">
+
+                        <i class="fa-solid fa-image"></i>
+
+                        <span>foto-ocorrencia.jpg</span>
+
+                        <button type="button">
+                            Visualizar
+                        </button>
+
+                    </div>
+
+
+                    <div class="anexo">
+
+                        <i class="fa-solid fa-file-pdf"></i>
+
+                        <span>documento.pdf</span>
+
+                        <button type="button">
+                            Visualizar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CLASSIFICAÇÃO -->
+
+            <section class="card">
+
+                <h2>
+                    <i class="fa-solid fa-layer-group"></i>
+                    Classificação da Demanda
+                </h2>
+
+                <div class="campo">
+
+                    <label for="prioridade">
+                        Prioridade
+                    </label>
+
+                    <select id="prioridade">
+
+                        <option value="">
+                            Selecione a prioridade
+                        </option>
+
+                        <option value="baixa">
+                            Baixa
+                        </option>
+
+                        <option value="media">
+                            Média
+                        </option>
+
+                        <option value="alta">
+                            Alta
+                        </option>
+
+                        <option value="critica">
+                            Crítica
+                        </option>
+
+                    </select>
+
+                    <small>
+                        A prioridade deve considerar a complexidade e
+                        urgência da ocorrência.
+                    </small>
+
+                </div>
+
+            </section>
+
+
+            <!-- PRAZO -->
+
+            <section class="card">
+
+                <h2>
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Prazo para Resolução
+                </h2>
+
+                <div class="campo">
+
+                    <label for="prazo">
+                        Definir prazo
+                    </label>
+
+                    <input
+                        type="date"
+                        id="prazo"
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- GESTÃO MUNICIPAL -->
+
+            <section class="card encaminhamento">
+
+                <h2>
+                    <i class="fa-solid fa-building-columns"></i>
+                    Encaminhamento
+                </h2>
+
+                <p>
+                    Para ocorrências de maior complexidade ou que necessitem
+                    de decisão administrativa, a demanda poderá ser encaminhada
+                    para a Gestão Municipal.
+                </p>
+
+                <button
+                    type="button"
+                    id="btnEncaminhar"
+                    class="btn-encaminhar"
+                >
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    Encaminhar para Gestão Municipal
+
+                </button>
+
+            </section>
+
+
+            <!-- HISTÓRICO -->
+
+            <section class="card">
+
+                <h2>
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    Histórico da Demanda
+                </h2>
+
+                <div id="historico" class="historico">
+
+                    <div class="historico-item">
+
+                        <div class="icone-historico">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>Cidadão</strong>
+
+                            <p>
+                                Ocorrência registrada.
+                            </p>
+
+                            <small>
+                                04/09/2026 - 10:30
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="historico-item">
+
+                        <div class="icone-historico">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>Sistema</strong>
+
+                            <p>
+                                Ocorrência encaminhada para análise.
+                            </p>
+
+                            <small>
+                                04/09/2026 - 10:31
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- BOTÕES -->
+
+            <div class="acoes">
+
+                <button
+                    type="button"
+                    id="btnSalvar"
+                    class="btn-principal"
+                >
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+
+                    Salvar Análise
+
+                </button>
+
+                <a
+                    href="ocorrencias-servidor.html"
+                    class="btn-voltar"
+                >
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Voltar
+
+                </a>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="../js/analise-ocorrencia.js"></script>
+
+</body>
+
+</html>

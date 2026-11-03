@@ -1,0 +1,145 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    min-height:100vh;
+}
+
+.conteudo{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.card{
+    width:100%;
+    max-width:650px;
+    background:white;
+    border-radius:15px;
+    padding:45px;
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+}
+
+.icone-topo{
+    text-align:center;
+    font-size:55px;
+    color:#1769aa;
+    margin-bottom:20px;
+}
+
+.card h1{
+    text-align:center;
+    color:#163b70;
+    margin-bottom:10px;
+}
+
+.subtitulo{
+    text-align:center;
+    color:#667085;
+    line-height:1.5;
+    margin-bottom:35px;
+}
+
+.campo{
+    margin-bottom:22px;
+}
+
+.campo label{
+    display:block;
+    font-weight:bold;
+    color:#344054;
+    margin-bottom:8px;
+}
+
+.campo input{
+    width:100%;
+    height:48px;
+    border:1px solid #d0d5dd;
+    border-radius:8px;
+    padding:0 14px;
+    font-size:15px;
+}
+
+.campo input:focus{
+    outline:none;
+    border-color:#1769aa;
+    box-shadow:0 0 0 3px rgba(23,105,170,.12);
+}
+
+/* Tipo de órgão */
+
+.tipo-orgao{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.opcao{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:18px;
+    border:2px solid #d0d5dd;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.opcao input{
+    position:absolute;
+    opacity:0;
+}
+
+.opcao i{
+    font-size:28px;
+    color:#1769aa;
+}
+
+.opcao:has(input:checked){
+    border-color:#1769aa;
+    background:#eef5fb;
+}
+
+/* Botão */
+
+.btn-principal{
+    width:100%;
+    height:50px;
+    border:none;
+    border-radius:8px;
+    background:#1769aa;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.btn-principal:hover{
+    background:#12558b;
+}
+
+@media(max-width:768px){
+
+.card{
+padding:30px 25px;
+}
+
+.tipo-orgao{
+grid-template-columns:1fr;
+}
+
+}

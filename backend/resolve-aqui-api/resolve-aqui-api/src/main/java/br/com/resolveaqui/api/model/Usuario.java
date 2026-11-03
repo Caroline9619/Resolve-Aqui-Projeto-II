@@ -1,3 +1,4 @@
+
 package br.com.resolveaqui.api.model;
 
 import jakarta.persistence.*;
@@ -26,18 +27,25 @@ public class Usuario {
     @Column(nullable = false)
     private String senha;
 
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 20)
+    private PerfilUsuario perfil = PerfilUsuario.CIDADAO;
+
     @OneToMany(mappedBy = "usuario")
-private List<Ocorrencia> ocorrencias;
+    private List<Ocorrencia> ocorrencias;
 
     public Usuario() {
     }
 
-    public Usuario(String nome, String email, String cpf, String celular, String senha) {
+    public Usuario(String nome, String email, String cpf,
+                   String celular, String senha) {
+
         this.nome = nome;
         this.email = email;
         this.cpf = cpf;
         this.celular = celular;
         this.senha = senha;
+        this.perfil = PerfilUsuario.CIDADAO;
     }
 
     public Long getId() {
@@ -82,5 +90,13 @@ private List<Ocorrencia> ocorrencias;
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public PerfilUsuario getPerfil() {
+        return perfil;
+    }
+
+    public void setPerfil(PerfilUsuario perfil) {
+        this.perfil = perfil;
     }
 }

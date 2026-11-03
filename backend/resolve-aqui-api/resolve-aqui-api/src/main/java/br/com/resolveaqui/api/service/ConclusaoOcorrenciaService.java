@@ -8,6 +8,7 @@ import br.com.resolveaqui.api.repository.ConclusaoOcorrenciaRepository;
 import br.com.resolveaqui.api.repository.OcorrenciaRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import br.com.resolveaqui.api.enums.StatusOcorrencia;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -45,7 +46,7 @@ public class ConclusaoOcorrenciaService {
         ConclusaoOcorrencia conclusaoSalva =
                 repository.save(conclusao);
 
-        ocorrencia.setStatus("concluída");
+        ocorrencia.setStatus(StatusOcorrencia.CONCLUIDA);
         ocorrenciaRepository.save(ocorrencia);
 
         return ConclusaoOcorrenciaResponseDTO.fromEntity(

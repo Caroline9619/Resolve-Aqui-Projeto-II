@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolve Aqui - Painel da Gestão</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+    <link rel="stylesheet" href="../css/gestao-ocorrencias.css"> 
+</head> 
+<body> 
+
+<div class="layout"> 
+    <!-- MENU LATERAL --> 
+    <aside class="sidebar"> 
+        <div class="logo-area"> 
+            <img src="../img/logo.png" alt="Resolve Aqui"> 
+        </div> 
+
+        <nav> 
+            <a href="gestao-ocorrencias.html" class="ativo"> 
+                <i class="fa-solid fa-list-check"></i> 
+                <span>Ocorrências</span> 
+            </a> 
+            <a href="configuracoes.html">
+        <i class="fa-solid fa-gear"></i>
+        <span>Configurações</span>
+    </a>
+            <a href="login.html"> 
+                <i class="fa-solid fa-right-from-bracket"></i> 
+                <span>Sair</span> 
+            </a> 
+        </nav> 
+
+        <!-- ALERTAS --> 
+        <div class="alertas-card"> 
+            <h3> 
+                <i class="fa-solid fa-bell"></i> 
+                Alertas 
+            </h3> 
+            <div class="alerta-item atrasada"> 
+                <i class="fa-solid fa-circle-exclamation"></i> 
+                <div> 
+                    <strong id="qtdAtrasadas">1</strong> 
+                    <p>Ocorrências atrasadas</p> 
+                </div> 
+            </div> 
+            <div class="alerta-item vencimento"> 
+                <i class="fa-solid fa-clock"></i> 
+                <div> 
+                    <strong id="qtdVencendo">2</strong> 
+                    <p>Próximas do vencimento</p> 
+                </div> 
+            </div> 
+        </div> 
+    </aside> 
+
+    <!-- CONTEÚDO --> 
+    <main class="conteudo"> 
+        <div class="cabecalho"> 
+            <h1>Ocorrências</h1> 
+            <p>Demandas encaminhadas pelo servidor para análise da Gestão Municipal.</p> 
+        </div> 
+
+        <!-- TABELA --> 
+        <div class="card"> 
+            <div class="titulo-secao"> 
+                <h2> 
+                    <i class="fa-solid fa-list-check"></i> 
+                    Ocorrências Encaminhadas à Gestão 
+                </h2> 
+            </div> 
+
+            <div class="tabela-container"> 
+                <table id="tabelaOcorrencias"> 
+                    <thead> 
+                        <tr> 
+                            <th></th> 
+                            <th>Protocolo</th> 
+                            <th>Descrição</th> 
+                            <th>Endereço</th> 
+                            <th>Anexos</th> 
+                            <th>Prioridade</th> 
+                            <th>Status</th> 
+                        </tr> 
+                    </thead> 
+                    <tbody> 
+                        <tr data-id="1"> 
+                            <td> 
+                                <input type="radio" name="ocorrencia" value="1"> 
+                            </td> 
+                            <td>RA-2026-000123</td> 
+                            <td>Poste sem iluminação</td> 
+                            <td>Rua das Flores, 120</td> 
+                            <td> 
+                                <button type="button" class="btn-anexo">Ver</button> 
+                            </td> 
+                            <td> 
+                                <span class="prioridade prioridade-alta">Alta</span> 
+                            </td> 
+                            <td> 
+                                <span class="status status-analise">Encaminhada à Gestão</span> 
+                            </td> 
+                        </tr> 
+
+                        <tr data-id="2"> 
+                            <td> 
+                                <input type="radio" name="ocorrencia" value="2"> 
+                            </td> 
+                            <td>RA-2026-000124</td> 
+                            <td>Praça abandonada</td> 
+                            <td>Praça Central</td> 
+                            <td> 
+                                <button type="button" class="btn-anexo">Ver</button> 
+                            </td> 
+                            <td> 
+                                <span class="prioridade prioridade-critica">Crítica</span> 
+                            </td> 
+                            <td> 
+                                <span class="status status-atrasada">Em atraso</span> 
+                            </td> 
+                        </tr> 
+                    </tbody> 
+                </table> 
+            </div> 
+        </div> 
+
+        <!-- PAINEL --> 
+        <div class="card"> 
+            <div class="titulo-secao"> 
+                <h2> 
+                    <i class="fa-solid fa-file-circle-check"></i> 
+                    Análise da Ocorrência 
+                </h2> 
+            </div> 
+
+            <div id="painelVazio" class="painel-vazio"> 
+                <i class="fa-solid fa-circle-info"></i> 
+                <h3>Nenhuma ocorrência selecionada</h3> 
+                <p>Selecione uma ocorrência na tabela acima.</p> 
+            </div> 
+
+            <div id="painelOcorrencia" class="oculto"> 
+                <div class="informacoes-grid"> 
+                    <div class="informacao"> 
+                        <label>Protocolo</label> 
+                        <strong id="protocolo"></strong> 
+                    </div> 
+                    <div class="informacao"> 
+                        <label>Endereço</label> 
+                        <strong id="endereco"></strong> 
+                    </div> 
+                    <div class="informacao"> 
+                        <label>Prioridade</label> 
+                        <strong id="prioridade"></strong> 
+                    </div> 
+                    <div class="informacao"> 
+                        <label>Status</label> 
+                        <strong id="statusAtual"></strong> 
+                    </div> 
+                </div> 
+
+                <div class="campo"> 
+                    <label>Descrição da Ocorrência</label> 
+                    <textarea id="descricao" rows="5" readonly></textarea> 
+                </div> 
+
+                <div class="campo"> 
+                    <label>Anexos</label> 
+                    <div id="listaAnexos" class="lista-anexos"></div> 
+                </div> 
+
+                <div class="campo"> 
+                    <label>Solução da Gestão Municipal</label> 
+                    <textarea id="solucao" rows="5" placeholder="Descreva a solução adotada"></textarea> 
+                </div> 
+
+                <div class="campo"> 
+                    <label>Novo Prazo</label> 
+                    <input type="date" id="novoPrazo"> 
+                </div> 
+
+                <div class="campo"> 
+                    <label>Novo Status</label> 
+                    <select id="novoStatus"> 
+                        <option value="">Selecione</option> 
+                        <option value="Em andamento">Em andamento</option> 
+                        <option value="Em execução">Em execução</option> 
+                        <option value="Resolvida">Resolvida</option> 
+                    </select> 
+                </div> 
+
+                <div class="acoes"> 
+                    <button id="btnAtualizar" type="button" class="btn-principal"> 
+                        <i class="fa-solid fa-check"></i> 
+                        Atualizar Ocorrência 
+                    </button> 
+
+                    <button id="btnEncaminhar" type="button" class="btn-encaminhar"> 
+                        <i class="fa-solid fa-building"></i> 
+                        Encaminhar para Órgão Competente 
+                    </button> 
+                </div> 
+            </div> 
+        </div> 
+    </main> 
+</div> 
+
+<script src="../js/gestao-ocorrencias.js"></script> 
+</body> 
+</html>

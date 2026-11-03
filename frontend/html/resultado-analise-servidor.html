@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolve Aqui - Resultado da Análise</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/resultado-analise-servidor.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- MENU LATERAL -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+            <img src="../img/logo.png" alt="Resolve Aqui">
+        </div>
+
+        <nav>
+
+            <a href="ocorrencias-servidor.html">
+                <i class="fa-solid fa-list-check"></i>
+                <span>Ocorrências</span>
+            </a>
+
+            <a href="login.html">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sair</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- CONTEÚDO -->
+
+    <main class="conteudo">
+
+        <div class="card">
+
+            <div class="icone-sucesso">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <h1 id="tituloResultado">
+                Ocorrência analisada com sucesso!
+            </h1>
+
+            <p class="subtitulo" id="subtituloResultado">
+                A ocorrência foi atualizada e o cidadão será notificado sobre a movimentação.
+            </p>
+
+            <!-- TABELA -->
+
+            <div class="tabela-container">
+
+                <table>
+
+                    <tbody>
+
+                        <tr>
+                            <th>Categoria</th>
+                            <td id="categoria">Iluminação Pública</td>
+                        </tr>
+
+                        <tr>
+                            <th>Número do Protocolo</th>
+                            <td id="protocolo">RA-2026-000123</td>
+                        </tr>
+
+                        <tr>
+                            <th>Nome do Cidadão</th>
+                            <td id="cidadao">Maria da Silva</td>
+                        </tr>
+
+                        <tr>
+                            <th>Data da Análise</th>
+                            <td id="dataAnalise">06/09/2026 14:35</td>
+                        </tr>
+
+                        <tr>
+                            <th>Status Atual</th>
+                            <td>
+                                <span class="status" id="statusAtual">
+                                    Em análise
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- NOTIFICAÇÃO -->
+
+            <div class="notificacao">
+
+                <i class="fa-solid fa-envelope-circle-check"></i>
+
+                <div>
+
+                    <strong>Notificação enviada ao cidadão</strong>
+
+                    <p>
+                        O cidadão receberá a atualização da ocorrência pelo e-mail ou celular cadastrado.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- BOTÃO -->
+
+            <button id="btnVoltar" class="btn-principal">
+    <i class="fa-solid fa-arrow-left"></i>
+    Continuar
+</button>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/resultado-analise-servidor.js"></script>
+
+</body>
+
+</html>

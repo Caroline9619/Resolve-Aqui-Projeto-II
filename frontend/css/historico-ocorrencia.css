@@ -1,0 +1,186 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+.layout{
+    display:flex;
+    min-height:100vh;
+}
+
+/* MENU */
+
+.sidebar{
+    width:220px;
+    background:#163b70;
+    color:white;
+    padding:35px 20px;
+}
+
+.logo-area{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.logo-area img{
+    width:120px;
+}
+
+.sidebar nav{
+    display:flex;
+    flex-direction:column;
+}
+
+.sidebar nav a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:6px;
+}
+
+.sidebar nav a:hover{
+    background:rgba(255,255,255,.15);
+}
+
+/* CONTEÚDO */
+
+.conteudo{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    padding:40px;
+}
+
+.card{
+    width:100%;
+    max-width:900px;
+    background:white;
+    border-radius:15px;
+    padding:35px;
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+}
+
+.card h1{
+    text-align:center;
+    color:#163b70;
+    margin-bottom:10px;
+}
+
+.subtitulo{
+    text-align:center;
+    color:#667085;
+    margin-bottom:30px;
+}
+
+/* PROTOCOLO */
+
+.protocolo-box{
+    background:#eef5fb;
+    border-left:5px solid #1769aa;
+    padding:18px;
+    border-radius:8px;
+    margin-bottom:30px;
+}
+
+.protocolo-box span{
+    display:block;
+    color:#667085;
+    font-size:13px;
+    margin-bottom:5px;
+}
+
+.protocolo-box strong{
+    color:#163b70;
+    font-size:22px;
+}
+
+/* TABELA */
+
+.tabela-container{
+    overflow-x:auto;
+    margin-bottom:35px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#163b70;
+    color:white;
+}
+
+th{
+    padding:15px;
+    text-align:left;
+}
+
+td{
+    padding:15px;
+    border-bottom:1px solid #e3e8ef;
+}
+
+tbody tr:hover{
+    background:#f8fafc;
+}
+
+/* BOTÃO */
+
+.btn-principal{
+    width:100%;
+    height:50px;
+    border:none;
+    border-radius:8px;
+    background:#1769aa;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    transition:.2s;
+}
+
+.btn-principal:hover{
+    background:#12558b;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.layout{
+flex-direction:column;
+}
+
+.sidebar{
+width:100%;
+}
+
+.sidebar nav{
+flex-direction:row;
+justify-content:center;
+}
+
+.conteudo{
+padding:20px;
+}
+
+.card{
+padding:25px;
+}
+
+}

@@ -8,6 +8,7 @@ import br.com.resolveaqui.api.repository.AtendimentoRepository;
 import br.com.resolveaqui.api.repository.OcorrenciaRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import br.com.resolveaqui.api.enums.StatusOcorrencia;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -44,7 +45,7 @@ public class AtendimentoService {
 
         Atendimento atendimentoSalvo = repository.save(atendimento);
 
-        ocorrencia.setStatus("em atendimento");
+        ocorrencia.setStatus(StatusOcorrencia.EM_ATENDIMENTO);
         ocorrenciaRepository.save(ocorrencia);
 
         return AtendimentoResponseDTO.fromEntity(atendimentoSalvo);
